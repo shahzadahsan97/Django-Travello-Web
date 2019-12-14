@@ -1,4 +1,5 @@
 {% load static %}
+{% static 'images' as baseUrl %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -256,7 +257,7 @@
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="{% static 'images/destination_1.jpg' %}" alt="">
+								<img src="{{baseUrl}}/{{Final_Dest.img}}" alt="">
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
 							</div>
 							<div class="destination_content">
