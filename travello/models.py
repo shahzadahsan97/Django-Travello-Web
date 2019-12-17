@@ -6,6 +6,7 @@ class Destination():
     desc : str
     name : str
     img : str
+    offer : bool
 
 
 # Create your models here.
