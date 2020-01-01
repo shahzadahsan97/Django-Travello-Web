@@ -257,7 +257,7 @@
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="{{baseUrl}}/{{Final_Dest.img}}" alt="">
+								<img src="{{Final_Dest.img.url}}" alt="">
 
 								{% if Final_Dest.offer %}
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
@@ -265,7 +265,7 @@
 							</div>
 							<div class="destination_content">
 								<div class="destination_title"><a href="destinations.html">{{Final_Dest.name}}</a></div>
-								<div class="destination_subtitle"><p>{{Final_Dest.desc}}</p></div>
+								<div class="destination_subtitle"><p>{{Final_Dest.info}}</p></div>
 								<div class="destination_price">From ${{Final_Dest.price}}</div>
 							</div>
 						</div>
