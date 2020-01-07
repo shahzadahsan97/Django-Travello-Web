@@ -10,9 +10,18 @@ def register(request):
         password1 = request.POST['password1']
         password2 = request.POST['password2']
         email = request.POST['email']
-
-        user = User.objects.create_user(username=username , password=password1 , email=email , first_name=first_name , last_name=last_name)
-        user.save()
+        if password1 == password2:
+            if User.objects.filter(username=username).exists():
+                print("User name is already taken.")
+            elif User.objects.filter(email=email).exists():
+                print("Email is already in use.")
+            else:
+                user = User.objects.create_user(username=username , password=password1 , email=email , first_name=first_name , last_name=last_name)
+                user.save()
+                print("User is created.")
+        else:
+            print("Password incorrct.\nPlease change your password and try again.")
+        
         return redirect('/')
 
 
